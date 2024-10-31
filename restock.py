@@ -19,5 +19,10 @@ The function will also update the inventory_records (For restocking) for a  give
     '''
     if current_day % 7 == 0: # Only proceed if on a restocking day
         print("Restocking day")
+        restock = 0 # Amount of t-shirts to restock
+
+        if available_items < 2000:
+            restock = 2000 - available_items
+            print(f"Restocking {restock} items")
 
     return available_items

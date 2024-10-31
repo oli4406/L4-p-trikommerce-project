@@ -25,4 +25,7 @@ The function will also update the inventory_records (For restocking) for a  give
             restock = 2000 - available_items
             print(f"Restocking {restock} items")
 
+        available_items += restock # Add the restocked t-shirts to the available_items
+        inventory_records.append((current_day, 0, restock, available_items))
+
     return available_items

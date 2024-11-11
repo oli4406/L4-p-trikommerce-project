@@ -20,7 +20,6 @@ The function will also update the inventory_records (For restocking) for a  give
 
     '''
     if current_day % 7 != 0: # only proceed if the day is not a restocking day
-        print("Selling day")
         sales = random.randint(0, 200)
         available_items -= sales # Take away sales from available items
 
